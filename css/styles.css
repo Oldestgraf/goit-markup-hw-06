@@ -96,13 +96,30 @@ button {
 }
 
 .section {
-  padding: 120px 0;
+  padding: 96px 28px;
+}
+@media only screen and (min-width: 1158px) {
+  .section {
+    padding: 120px 0;
+  }
 }
 
 .container {
-  width: 1158px;
-  padding: 0 15px;
+  max-width: 320px;
+  padding: 0 16px;
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
 }
 
 .team-title,
@@ -192,12 +209,27 @@ button {
   justify-content: space-between;
 }
 .header-logo {
-  margin-right: 76px;
+  margin-right: 149px;
+}
+@media only screen and (min-width: 768px) {
+  .header-logo {
+    margin-right: 120px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .header-logo {
+    margin-right: 76px;
+  }
 }
 .header-nav-list {
   display: flex;
   align-items: center;
   gap: 40px;
+}
+@media only screen and (max-width: 767.98px) {
+  .header-nav-list {
+    display: none;
+  }
 }
 .header-nav-link {
   position: relative;
@@ -236,12 +268,39 @@ button {
 .header-nav-link:active {
   color: var(--ocean);
 }
+
+.mobile-menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  min-height: 24px;
+  padding: 16px 0;
+  background-color: transparent;
+  border: none;
+}
+@media only screen and (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
 .header-address {
+}
+@media only screen and (max-width: 767.98px) {
+  .header-address {
+    display: none;
+  }
 }
 .header-address-list {
   display: flex;
   align-items: center;
   gap: 40px;
+}
+@media only screen and (max-width: 1157.98px) {
+  .header-address-list {
+    display: inline;
+  }
 }
 .header-address-link {
   display: block;
@@ -252,9 +311,25 @@ button {
   transition: var(--anim-main);
   transition-property: color;
 }
+@media only screen and (max-width: 1157.98px) {
+  .header-address-link {
+    padding: 0;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: 0.03em;
+  }
+}
 .header-address-link:hover,
 .header-address-link:focus {
   color: var(--ocean);
+}
+
+@media only screen and (max-width: 1157.98px) {
+  .email-link {
+    margin-bottom: 12px;
+  }
 }
 
 /* #endregion Header */
@@ -615,9 +690,9 @@ button {
   height: 100%;
   z-index: 999;
 
-  /* opacity: 0;
+  opacity: 0;
   pointer-events: none;
-  visibility: hidden; */
+  visibility: hidden;
 }
 
 .modal-overlay.is-open {
