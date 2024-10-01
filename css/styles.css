@@ -449,15 +449,6 @@ button {
   }
 }
 .feature-caption {
-  /* text-align: left;
-  margin-bottom: 8px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: var(--navy-blue); */
-}
-.feature-caption {
   font-family: Roboto;
   font-size: 36px;
   font-style: normal;
@@ -465,17 +456,21 @@ button {
   line-height: 40px; /* 111.111% */
   letter-spacing: 0.72px;
   margin-bottom: 8px;
+  color: var(--navy-blue);
 }
 @media only screen and (min-width: 768px) {
   .feature-caption {
     text-align: left;
   }
 }
-.feature-desc {
-  /* text-align: left;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--slate); */
+@media only screen and (min-width: 1158px) {
+  .feature-caption {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
 }
 .feature-desc {
   font-family: Roboto;
@@ -483,10 +478,17 @@ button {
   font-weight: 500;
   line-height: 24px; /* 150% */
   letter-spacing: 0.32px;
+  color: var(--slate);
   text-align: left;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1158px) {
   .feature-desc {
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.32px;
   }
 }
 /* #endregion Features */
