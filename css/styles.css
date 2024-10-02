@@ -342,6 +342,7 @@ button {
 /* #region Hero */
 
 .hero-section {
+  padding: 72px 0;
   width: 100%;
   max-width: 1440px;
   background-image: linear-gradient(var(--grey), var(--grey)),
@@ -359,6 +360,7 @@ button {
 }
 @media only screen and (min-width: 768px) {
   .hero-section {
+    padding: 112px 0;
     background-image: linear-gradient(var(--grey), var(--grey)),
       url(../images/hero/office_tab@1x.jpg);
   }
@@ -371,6 +373,7 @@ button {
 }
 @media only screen and (min-width: 1158px) {
   .hero-section {
+    padding: 188px 0;
     background-image: linear-gradient(var(--grey), var(--grey)),
       url(../images/hero/office_des@1x.png);
   }
@@ -383,7 +386,6 @@ button {
 }
 
 .hero-container {
-  padding: 188px 0;
 }
 
 .hero-title {
@@ -741,8 +743,7 @@ button {
 @media only screen and (min-width: 768px) {
   .footer-container {
     flex-direction: column;
-    /* align-items: center; */
-    padding-left: 108px;
+    width: 584px;
   }
 }
 @media only screen and (min-width: 1158px) {
