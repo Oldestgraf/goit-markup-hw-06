@@ -345,11 +345,41 @@ button {
   width: 100%;
   max-width: 1440px;
   background-image: linear-gradient(var(--grey), var(--grey)),
-    url(../images/people-office.jpg);
+    url(../images/hero/office_mob@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin: 0 auto;
+}
+@media (min-resolution: 192dpi) {
+  .hero-section {
+    background-image: linear-gradient(var(--grey), var(--grey)),
+      url(../images/hero/office_mob@2x.jpg);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero-section {
+    background-image: linear-gradient(var(--grey), var(--grey)),
+      url(../images/hero/office_tab@1x.jpg);
+  }
+}
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .hero-section {
+    background-image: linear-gradient(var(--grey), var(--grey)),
+      url(../images/hero/office_tab@2x.jpg);
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .hero-section {
+    background-image: linear-gradient(var(--grey), var(--grey)),
+      url(../images/hero/office_des@1x.png);
+  }
+}
+@media only screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+  .hero-section {
+    background-image: linear-gradient(var(--grey), var(--grey)),
+      url(../images/hero/office_des@2x.png);
+  }
 }
 
 .hero-container {
