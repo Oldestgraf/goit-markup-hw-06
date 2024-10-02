@@ -782,7 +782,6 @@ button {
   .footer-socials {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -956,8 +955,8 @@ button {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   width: 90%;
-  max-width: 408px;
-  min-height: 584px;
+  max-width: 288px;
+  min-height: 623px;
   flex-shrink: 0;
   border-radius: 4px;
   background: var(--dairy);
@@ -968,7 +967,12 @@ button {
   transition: var(--anim-main);
   transition-property: transform;
 }
-
+@media only screen and (min-width: 768px) {
+  .modal {
+    max-width: 408px;
+    min-height: 584px;
+  }
+}
 .modal-btn.close-modal {
   position: absolute;
   top: 24px;
@@ -1144,3 +1148,88 @@ input[type="checkbox"]:checked
 }
 
 /* #endregion Modal */
+
+/* #region Mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  padding: 72px 16px 40px;
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  transition: var(--anim-main);
+  transition-property: transform;
+
+  transform: translateX(100%);
+}
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+.mobile-menu .mobile-menu-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+  transition: var(--anim-main);
+  transition-property: background-color, border;
+  padding: 0;
+}
+
+.mobile-menu .mobile-menu-btn:active {
+  fill: var(--white);
+  background-color: var(--ocean);
+  border: transparent;
+}
+
+.mobile-menu-icon {
+  transition: var(--anim-main);
+  transition-property: fill;
+}
+
+.mobile-menu-icon:active {
+  fill: var(--white);
+}
+.mobile-menu-nav {
+  margin-bottom: auto;
+}
+.mobile-menu-nav li:not(:last-child) {
+  margin-bottom: 40px;
+}
+.mobile-menu-nav a {
+  color: var(--navy-blue);
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px; /* 111.111% */
+  letter-spacing: 0.72px;
+}
+.mobile-menu-nav a.active {
+  color: var(--ocean);
+}
+.mobile-menu-contacts {
+  margin-bottom: 48px;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+  letter-spacing: 0.4px;
+}
+.mobile-menu-contacts a.active {
+  color: var(--ocean);
+}
+.mobile-menu-contacts li:not(:last-child) {
+  margin-bottom: 24px;
+}
+.mobile-menu-link {
+  color: var(--slate);
+}
+.mobile-menu-socials {
+  gap: 40px;
+}
+/* #endregion Mobile menu */
